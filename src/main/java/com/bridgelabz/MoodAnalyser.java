@@ -27,6 +27,17 @@ public class MoodAnalyser {
         }
         return null;
     }
+    public String analyseMoodConstructorUsingTryCatch() {
+        try {
+            if (message.contains(null)){
+                throw new NullPointerException();
+            }
+        }catch (NullPointerException e){
+            System.out.println(e.getLocalizedMessage());
+            return "HAPPY";
+        }
+        return null;
+    }
 
 
 }

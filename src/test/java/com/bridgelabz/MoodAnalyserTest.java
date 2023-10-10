@@ -25,5 +25,10 @@ public class MoodAnalyserTest {
         MoodAnalyser moodAnalyser=new MoodAnalyser("I am in happy mood");
         Assertions.assertEquals("HAPPY",moodAnalyser.analyseMoodConstructor());
     }
+    @Test
+    public void givenTheNullMoodShouldReturnHappyHandleUsingTryCatch(){
+        MoodAnalyser moodAnalyser=new MoodAnalyser(null);
+        Assertions.assertEquals("HAPPY",moodAnalyser.analyseMoodConstructorUsingTryCatch());
+    }
 
 }
